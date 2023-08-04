@@ -80,10 +80,6 @@
               "version": "[7.0.8, 7.0.8]"
             },
             {
-              "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-              "version": "[7.0.8, 7.0.8]"
-            },
-            {
               "name": "Microsoft.NETCore.App.Host.win-x64",
               "version": "[7.0.8, 7.0.8]"
             },
@@ -92,15 +88,7 @@
               "version": "[7.0.8, 7.0.8]"
             },
             {
-              "name": "Microsoft.NETCore.App.Runtime.win-x64",
-              "version": "[7.0.8, 7.0.8]"
-            },
-            {
               "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[7.0.8, 7.0.8]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
               "version": "[7.0.8, 7.0.8]"
             },
             {
@@ -114,11 +102,6 @@
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-preview.6.23330.14\\RuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "win-x64": {
-          "#import": []
         }
       }
     }

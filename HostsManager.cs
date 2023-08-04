@@ -4,7 +4,7 @@ namespace osuHosts;
 
 public static class HostsManager
 {
-    public const string AdditionalDomainsFile = "AdditionalDonames.txt";
+    public const string AdditionalDomainsFile = "AdditionalDomains.txt";
     
     private const string PREFIX = "# osu!Hosts";
 
@@ -102,7 +102,7 @@ public static class HostsManager
 
     private static void ReadAdditionalDomains()
     {
-        foreach (var d in BuildinDonames)
+        foreach (var d in BuildinDomains)
         {
             Domains.Add(d);
         }
@@ -120,7 +120,7 @@ public static class HostsManager
         var newLines = reader.ReadToEnd()
             .Replace("\r", String.Empty)
             .Split('\n')
-            .Where(line => !BuildinDonames.ToHashSet().Contains(line));
+            .Where(line => !BuildinDomains.ToHashSet().Contains(line));
         
         foreach (var line in newLines)
         {
@@ -128,7 +128,7 @@ public static class HostsManager
         }
     }
     
-    private static string[] BuildinDonames = new[]
+    private static string[] BuildinDomains = new[]
     {
         "osu.ppy.sh",
         "osu.ppy.sh",
