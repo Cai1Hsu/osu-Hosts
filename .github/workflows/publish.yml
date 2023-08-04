@@ -38,8 +38,8 @@ jobs:
         echo "" >> .\先测速再运行osu!hosts.txt
         Compress-Archive * osu!Hosts-win-x64.zip
     
-    - uses: Shopify/upload-to-release@v1
     - name: Publish osu!Hosts-win-x64
+      uses: Shopify/upload-to-release@v1
       with:
         path: bin/Release/net7.0/win-x64/publish/osu-hosts/osu!Hosts-win-x64.zip
         repo-token: ${{ secrets.GITHUB_TOKEN }}
