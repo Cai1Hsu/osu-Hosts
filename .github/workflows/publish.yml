@@ -5,7 +5,7 @@ name: Release
 
 on:
   release:
-    branches: [ "master" ]
+    - created
 
 jobs:
   build:
