@@ -1,0 +1,45 @@
+# This workflow will build a .NET project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
+
+name: Release
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+  release:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: Windows-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 7.0.x
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet publish -c Release -r win-x64 --sc true
+    - name: Download CloudflareST
+      run: |
+        cd bin\Release\net7.0\win-x64\publish\
+        wget "https://github.com/XIU2/CloudflareSpeedTest/releases/latest/download/CloudflareST_windows_amd64.zip"
+        unzip *.zip
+        mkdir osu-hosts
+        cp *.exe .\osu-hosts\
+        cd osu-hosts
+        echo ".\CloudflareST.exe -dd -url osu.ppy.sh -t 2" >> .\测速并保存ip.bat
+        echo "" >> .\先测速再运行osu!hosts.txt
+        Compress-Archive * osu!Hosts-win-x64.zip
+    
+    - uses: Shopify/upload-to-release@v1
+    - name: Publish osu!Hosts-win-x64
+      with:
+        path: bin/Release/net7.0/win-x64/publish/osu-hosts/osu!Hosts-win-x64.zip
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
