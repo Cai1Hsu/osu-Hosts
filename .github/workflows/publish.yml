@@ -25,7 +25,7 @@ jobs:
     - name: Download CloudflareST
       run: |
         cd bin\Release\net7.0\win-x64\publish\
-        wget "https://github.com/XIU2/CloudflareSpeedTest/releases/latest/download/CloudflareST_windows_amd64.zip"
+        Invoke-WebRequest "https://github.com/XIU2/CloudflareSpeedTest/releases/latest/download/CloudflareST_windows_amd64.zip" -o CloudflareST_windows_amd64.zip
         unzip *.zip
         mkdir osu-hosts
         cp *.exe .\osu-hosts\
