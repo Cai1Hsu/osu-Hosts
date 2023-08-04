@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "e6LI1lJ0wBfDAlTwzujrXgfJsJcl35G/hDYTvJg8so0p68zZ9RnVLFCnr4hGLSzb/+JylEAxnI3V8S1jlmISfA==",
+  "success": true,
+  "projectFilePath": "C:\\repo\\osuHosts\\osuHosts.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Caiyi Hsu\\.nuget\\packages\\microsoft.dotnet.ilcompiler\\7.0.8\\microsoft.dotnet.ilcompiler.7.0.8.nupkg.sha512",
+    "C:\\Users\\Caiyi Hsu\\.nuget\\packages\\microsoft.net.illink.analyzers\\7.0.100-1.23211.1\\microsoft.net.illink.analyzers.7.0.100-1.23211.1.nupkg.sha512",
+    "C:\\Users\\Caiyi Hsu\\.nuget\\packages\\microsoft.net.illink.tasks\\7.0.100-1.23211.1\\microsoft.net.illink.tasks.7.0.100-1.23211.1.nupkg.sha512",
+    "C:\\Users\\Caiyi Hsu\\.nuget\\packages\\runtime.win-x64.microsoft.dotnet.ilcompiler\\7.0.8\\runtime.win-x64.microsoft.dotnet.ilcompiler.7.0.8.nupkg.sha512",
+    "C:\\Users\\Caiyi Hsu\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.8\\microsoft.netcore.app.ref.7.0.8.nupkg.sha512",
+    "C:\\Users\\Caiyi Hsu\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\7.0.8\\microsoft.netcore.app.runtime.win-x64.7.0.8.nupkg.sha512",
+    "C:\\Users\\Caiyi Hsu\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.8\\microsoft.windowsdesktop.app.ref.7.0.8.nupkg.sha512",
+    "C:\\Users\\Caiyi Hsu\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\7.0.8\\microsoft.windowsdesktop.app.runtime.win-x64.7.0.8.nupkg.sha512",
+    "C:\\Users\\Caiyi Hsu\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.8\\microsoft.aspnetcore.app.ref.7.0.8.nupkg.sha512",
+    "C:\\Users\\Caiyi Hsu\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\7.0.8\\microsoft.aspnetcore.app.runtime.win-x64.7.0.8.nupkg.sha512",
+    "C:\\Users\\Caiyi Hsu\\.nuget\\packages\\runtime.win-x64.microsoft.dotnet.ilcompiler\\7.0.8\\runtime.win-x64.microsoft.dotnet.ilcompiler.7.0.8.nupkg.sha512",
+    "C:\\Users\\Caiyi Hsu\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.8\\microsoft.netcore.app.host.win-x64.7.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}
