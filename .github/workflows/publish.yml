@@ -37,5 +37,6 @@ jobs:
     - name: Publish osu!Hosts-win-x64
       uses: Shopify/upload-to-release@v1.0.1
       with:
+        name: osu!Hosts-win-x64.zip
         path: bin/Release/net7.0/win-x64/publish/osu-hosts/osu!Hosts-win-x64.zip
         repo-token: ${{ secrets.GITHUB_TOKEN }}
