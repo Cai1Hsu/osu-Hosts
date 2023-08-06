@@ -1,6 +1,15 @@
 ﻿using System.Net;
 using osuHosts;
 
+void CheckAndElevate()
+{
+    Logger.Log(TranslationAssets.CheckPrivilege);
+    if (PrivilegeManager.IsAdministrator()) return;
+
+    Logger.Log(TranslationAssets.ElevateToAdministrator);
+    PrivilegeManager.GrantMePrivilege();
+}
+
 const string IP_FILE = "result.csv";
 
 TranslationAssets.BindTranslations();
@@ -14,12 +23,16 @@ ArgumentParser.AddOperation("--exit", TranslationAssets.ArgExitUsage,
 ArgumentParser.AddOperation("--revert", TranslationAssets.ArgRevertUsage,
     _ =>
     {
+        CheckAndElevate();
+        
         HostsManager.Revert();
     });
 
 ArgumentParser.AddOperation("--apply", TranslationAssets.ArgApplyUsage,
     arg =>
     {
+        CheckAndElevate();
+        
         if (!arg.HasValue) throw new Exception(TranslationAssets.NoSpecifiedIP.ToString());
         
         // Check validity of ip
@@ -59,12 +72,6 @@ ArgumentParser.AddOperation("-h", TranslationAssets.ArgHelpUsage,
         Environment.Exit(0);
     });
 
-Logger.Log(TranslationAssets.CheckPrivilege);
-_ = PrivilegeManager.IsAdministrator();
-
-Logger.Log(TranslationAssets.ElevateToAdministrator);
-PrivilegeManager.GrantMePrivilege();
-
 Logger.Log(TranslationAssets.InitlizeHostsManager);
 HostsManager.Init();
 
@@ -72,6 +79,8 @@ Logger.Log(TranslationAssets.Initlized);
 
 // Execute when everything is ready
 if (args.Length != 0)ArgumentParser.ParseAndExecute(args);
+
+CheckAndElevate();
 
 // Normal start
 Logger.Log(TranslationAssets.NormalStartTitle);
