@@ -201,7 +201,13 @@ public static class TranslationAssets
 
     public static TranslatableString ArgExitUsage = new()
     {
-        English = new("Internal use only, for elevating privilege."),
-        SChinese = new("仅供内部使用，用于提升权限。"),
+        English = new("--exit\tInternal use only, for elevating privilege."),
+        SChinese = new("--exit\t仅供内部使用，用于提升权限。"),
+    };
+    
+    public static TranslatableString UnrecognizedArgument = new()
+    {
+        English = new("Unrecognized argument: {0}"),
+        SChinese = new("无法识别的参数：{0}"),
     };
 }

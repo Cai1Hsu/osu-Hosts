@@ -18,6 +18,11 @@ public static class ArgumentParser
             {
                 action(new Argument(key, val));
             }
+            else
+            {
+                throw new InvalidOperationException(
+                    string.Format(TranslationAssets.UnrecognizedArgument.ToString(), key));
+            }
         }
     }
     
