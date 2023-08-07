@@ -131,7 +131,6 @@ public static class HostsManager
     private static string[] BuildinDomains = new[]
     {
         "osu.ppy.sh",
-        "osu.ppy.sh",
         "a.ppy.sh",
         "c.ppy.sh",
         "i.ppy.sh",
@@ -159,6 +158,7 @@ public static class HostsManager
         "auth-files.ppy.sh",
         "dev.ppy.sh",
         "status.ppy.sh",
+        "packs.ppy.sh",
         "bm1.ppy.sh",
         "bm2.ppy.sh",
         "bm3.ppy.sh",
