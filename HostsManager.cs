@@ -159,6 +159,7 @@ public static class HostsManager
         "dev.ppy.sh",
         "status.ppy.sh",
         "packs.ppy.sh",
+        "osustats.ppy.sh",
         "bm1.ppy.sh",
         "bm2.ppy.sh",
         "bm3.ppy.sh",
